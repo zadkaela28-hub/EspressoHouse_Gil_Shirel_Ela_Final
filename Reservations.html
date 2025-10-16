@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>טופס הזמנת הקפה שלנו</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/Style.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+</head>
+<body onload="startForm()">
+<header id="HeaderReservations">
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <h1>טופס הזמנת הקפה שלנו</h1>
+    <nav class="breadcrumbs" aria-label="פירורי לחם">
+        <ol>
+            <li><a href="index.html">בית</a></li>
+            <li aria-current="page">להזמנות</li>
+        </ol>
+    </nav>
+</header>
+<form id="ReservationCoffee" onsubmit="return handleSend()">
+    <div>
+        <p>פרטים</p>
+        <label for="customer">שם מלא (חובה)</label><br>
+        <input id="customer" name="customer" type="text" required placeholder="לדוגמה: עידן צור" oninput="updateButton(); resultBox.innerHTML=' '"><br><br>
+    </div>
+    <div>
+        <p>בחר/י גודל קפה (חובה)</p>
+        <label><input type="radio" name="size" value="קטן" required onchange="pickSize()"> קטן</label> <br>
+        <label><input type="radio" name="size" value="בינוני" onchange="pickSize()"> בינוני</label><br>
+        <label><input type="radio" name="size" value="גדול" onchange="pickSize()"> גדול </label><br>
+        <label><input type="radio" name="size" value="XL" onchange="pickSize()"> XL</label>
+        <p class="choice">הבחירה שלך:</p>
+        <img src="Images/CupS.png" alt="כוס קפה קטנה" title="כוס קפה קטנה" >
+        <img src="Images/CupM.png" alt="כוס קפה בינונית" title="כוס קפה בינונית" >
+        <img src="Images/CupL.png" alt="כוס קפה גדולה" title="כוס קפה גדולה" >
+        <img src="Images/CupXL.png" alt="כוס קפה XL" title="כוס קפה XL">
+    </div>
+    <div>
+        <p>בחר/י סוג קפה (חובה)</p>
+        <label><input type="radio" name="type" value="אספרסו" required onchange="pickType()"> אספרסו</label><br>
+        <label><input type="radio" name="type" value="קפוצ׳ינו" onchange="pickType()">  קפוצ׳ינו</label><br>
+        <label><input type="radio" name="type" value="לאטה" onchange="pickType()"> לאטה</label><br>
+        <label><input type="radio" name="type" value="אמריקנו" onchange="pickType()">  אמריקנו </label><br>
+        <label><input type="radio" name="type" value="מוקה" onchange="pickType()">  מוקה</label>
+        <p class="choice">הבחירה שלך:</p>
+        <img src="Images/Espresso.png" alt="תמונה של כוס אספרסו" title="תמונה של כוס אספרסו">
+        <img src="Images/Capuchino.png" alt="תמונה של כוס קפוצינו" title="תמונה של כוס קפוצינו">
+        <img src="Images/Latte.png" alt="תמונה של כוס לאטה" title="תמונה של כוס לאטה">
+        <img src="Images/Americano.png" alt="תמונה של כוס אמריקנו" title="תמונה של כוס אמריקנו">
+        <img src="Images/Moka.png" alt="תמונה של כוס מוקה" title="תמונה של כוס מוקה">
+    </div>
+    <div>
+        <p>תוספות (רשות - אפשר כמה)</p>
+        <label><input type="checkbox" name="extras" value="קינמון" onchange="toggleExtras()">קינמון</label><br>
+        <label><input type="checkbox" name="extras" value="סוכר" onchange="toggleExtras()"> סוכר </label><br>
+        <label><input type="checkbox" name="extras" value="חלב סויה" onchange="toggleExtras()"> חלב סויה</label><br>
+        <label><input type="checkbox" name="extras" value="חזק" onchange="toggleExtras()">חזק </label><br>
+        <label><input type="checkbox" name="extras" value="חלש" onchange="toggleExtras()"> חלש</label><br>
+        <p class="choice">הבחירה שלך:</p>
+        <img src="Images/Cinnamon.png" alt="תמונה של קינמון" title="תמונה של קינמון">
+        <img src="Images/Sugar.png" alt="תמונה של סוכר" title="תמונה של סוכר">
+        <img src="Images/SoyMilk.png" alt="תמונה של חלב סויה" title="תמונה של חלב סויה">
+        <img src="Images/StrongCoffie.png" alt="תמונה של קפה חזק" title="תמונה של קפה חזק">
+        <img src="Images/CoffeeLIght.png" alt="תמונה של קפה חלש" title="תמונה של קפה חלש">
+    </div>
+    <button type="submit" id="submit" >אישור</button>
+    <p id="result"></p>
+</form>
+<footer>
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <h3 id="FooterConnectionTitle" class="TitleFooterSection">כתבו לנו, אנחנו עונים מהר</h3>
+    <span id="ToConnect" class="TextFooterSection">כתובת: רח’ הקלייה 10, תל אביב<br>טלפון: 03-1234567<br> מייל: hello@espresso.house</span>
+    <h3 id="FooterOpeningHoursTitle" class="TitleFooterSection">נשמח לארח אתכם</h3>
+    <span id="OpeningHours" class="TextFooterSection">א’-ה’ 07:30-21:00<br>ו’ 07:30-15:00<br>שבת - סגור</span>
+    <h3 id="FooterSocialMedia" class="TitleFooterSection">בואו להתרשם מהעולם שלנו גם אונליין</h3>
+    <img src="./Images/FacebookLogo.png" alt="פייסבוק" title="פייסבוק" id="Facebook" class="SocialMediaLogos">
+    <img src="./Images/InstagramLogo.png" alt="אינסטגרם" title="אינסטגרם" id="Instagram" class="SocialMediaLogos">
+    <img src="./Images/TiktokLogo.png" alt="טיקטוק" title="טיקטוק" id="Tiktok" class="SocialMediaLogos">
+</footer>
+</body>
+</html>

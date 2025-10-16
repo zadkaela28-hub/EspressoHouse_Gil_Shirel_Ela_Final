@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Espresso House - Home</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/Style.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+<header>
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <h1 id="HPTitle">לגימה אחת, עולם שלם</h1>
+    <span id="HPTitleSubText">ב־Espresso House כל פריט נבחר בקפידה - מהפולים שנקלים מדי יום ועד למאפה שנשלף חם מהתנור.<br/> זה לא רק קפה, זו חוויה עוטפת שמאפשרת לעצור, לנשום, ולהרגיש טעם שהוא רגע של שלווה בשילוב של סטייל.</span><br/>
+    <img src="Images/HomePageHero.jpg" alt="" title="רקע של בית קפה" id="HeroImage">
+    <div class="HeroContent">
+        <a class="Buttons" id="GoToManu" href="#Menu">לגלות את התפריט</a>
+        <a class="Buttons" id="ForReservation" href="Reservations.html">קפה עד הבית</a>
+    </div>
+    <nav class="breadcrumbs" aria-label="פירורי לחם">
+        <ol>
+            <li aria-current="page">בית</li>
+        </ol>
+    </nav>
+</header>
+<section id="Menu">
+    <h2 id="MenuTitle">רגעים של קפה ומאפה</h2>
+    <div class="MenuWrap">
+        <div class="MenuList" id="MenuCoffee">
+            <span id="Espresso" class="CoffeeMenu">אספרסו - קצר, מדויק, עוצמתי (₪8)</span>
+            <span id="Latte" class="CoffeeMenu">לאטה - איזון חלק של אספרסו וחלב מוקצף (₪14)</span>
+            <span id="Cappuccino" class="CoffeeMenu">קפוצ’ינו - הקלאסיקה האיטלקית (₪12)</span>
+        </div>
+        <div class="MenuPhoto" id="CoffeePhoto">
+            <img src="./Images/MenuEspresso.png" alt="ספל קפה לבן יוקרתי עם אדים" id="menu-cup">
+        </div>
+        <div class="MenuList" id="MenuBake">
+            <span id="ButterCroissant" class="BakeMenu">קרואסון חמאה (₪11)</span>
+            <span id="AlmondCroissant" class="BakeMenu">קרואסון שקדים (₪14)</span>
+            <span id="CheeseCake" class="BakeMenu">עוגת גבינה קרה (₪16)</span>
+        </div>
+        <div class="MenuPhoto" id="BakePhoto">
+            <img src="./Images/Croissant.png" alt="קוראסון נקי" id="MenuBakes">
+        </div>
+    </div>
+</section>
+
+<section id="MoodSection">
+    <h2 id="OurMoodTitle" class="MoodSection">רגעים. טעמים. זכרונות.</h2>
+    <div class="MoodItem">
+        <img src="./Images/EspressoCup.jpg" alt="כוס אספרסו" title="כוס אספרסו" id="EspressoCup" class="ImgMoodSection"><br>
+        <span id="ForAccuracy" class="MoodSection">לרגעים של דיוק.</span><br>
+    </div>
+    <div class="MoodItem">
+        <img src="./Images/Couple.jpg" alt="זוג בבית קפה" title="זוג בבית קפה" id="Couple" class="ImgMoodSection"><br>
+        <span id="ForConnections" class="MoodSection">לרגעים של חיבור.</span><br>
+    </div>
+    <div class="MoodItem">
+        <img src="./Images/HappyWomen.jpg" alt="אישה שמחה" title="אישה שמחה עם מאפים" id="HappyWomen" class="ImgMoodSection"><br>
+        <span id="ForPampering" class="MoodSection">לרגעים של פינוק.</span><br>
+    </div>
+    <div class="MoodItem">
+        <img src="./Images/PeacefulMan.jpg" alt="אדם שליו" title="אדם שליו ונינוח" id="PeacefulMan" class="ImgMoodSection"><br>
+        <span id="ForPeaceful" class="MoodSection">לרגעים של שלווה.</span><br>
+    </div>
+</section>
+
+<footer>
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <h3 id="FooterConnectionTitle" class="TitleFooterSection">כתבו לנו, אנחנו עונים מהר</h3>
+    <span id="ToConnect" class="TextFooterSection">כתובת: רח’ הקלייה 10, תל אביב<br>טלפון: 03-1234567<br> מייל: hello@espresso.house</span>
+    <h3 id="FooterOpeningHoursTitle" class="TitleFooterSection">נשמח לארח אתכם</h3>
+    <span id="OpeningHours" class="TextFooterSection">א’-ה’ 07:30-21:00<br>ו’ 07:30-15:00<br>שבת - סגור</span>
+    <h3 id="FooterSocialMedia" class="TitleFooterSection">בואו להתרשם מהעולם שלנו גם אונליין</h3>
+    <img src="./Images/FacebookLogo.png" alt="פייסבוק" title="פייסבוק" id="Facebook" class="SocialMediaLogos">
+    <img src="./Images/InstagramLogo.png" alt="אינסטגרם" title="אינסטגרם" id="Instagram" class="SocialMediaLogos">
+    <img src="./Images/TiktokLogo.png" alt="טיקטוק" title="טיקטוק" id="Tiktok" class="SocialMediaLogos">
+</footer>
+</body>
+</html>

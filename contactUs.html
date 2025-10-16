@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>Espresso House - צור קשר</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/Style.css" rel="stylesheet" />
+</head>
+
+<body class="contact-page">
+<header id="HeaderContactUs">
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html" aria-current="page">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <nav class="breadcrumbs" aria-label="פירורי לחם">
+        <ol>
+            <li><a href="index.html">בית</a></li>
+            <li aria-current="page">צור קשר</li>
+        </ol>
+    </nav>
+</header>
+
+<div class="contact">
+    <h1 class="contact-title">נשמח לשמוע ממך</h1>
+    <section class="contact-details">
+        <ul>
+            <li><strong>טלפון:</strong> <a href="tel:031234567">03-1234567</a></li>
+            <li><strong>מייל:</strong> <a href="mailto:hello@espresso.house">hello@espresso.house</a></li>
+            <li><strong>כתובת:</strong> רח’ הקלייה 10, תל אביב</li>
+            <li><strong>פייסבוק:</strong> אספרסו האוס </li>
+            <li><strong>אינסטגרם:</strong> Espresso.House </li>
+        </ul>
+    </section>
+    <section class="contact-form">
+        <form action="#" method="post" autocomplete="on">
+            <div class="form-row">
+                <label for="fullName">שם מלא:*</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">מספר טלפון:</label>
+                <input type="tel" id="phone" name="phone" inputmode="tel" dir="rtl" placeholder="למשל: 052-1234567">
+            </div>
+
+            <div class="form-row">
+                <label for="email">אימייל:*</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-row">
+                <label for="message">תיאור הפנייה:*</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="Buttons">שלח/י פנייה</button>
+        </form>
+    </section>
+</div>
+<footer>
+    <nav aria-label="main-nav">
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="CoffeeBeans.html">הפולים שלנו</a></li>
+            <li><a href="Reservations.html">להזמנות</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="contactUs.html">צור קשר</a></li>
+            <li><a href="siteMap.html">מפת אתר</a></li>
+        </ul>
+    </nav>
+    <h3 id="FooterConnectionTitle" class="TitleFooterSection">כתבו לנו, אנחנו עונים מהר</h3>
+    <span id="ToConnect" class="TextFooterSection">כתובת: רח’ הקלייה 10, תל אביב<br>טלפון: 03-1234567<br>מייל: hello@espresso.house</span>
+    <h3 id="FooterOpeningHoursTitle" class="TitleFooterSection">נשמח לארח אתכם</h3>
+    <span id="OpeningHours" class="TextFooterSection">א’-ה’ 07:30-21:00<br>ו’ 07:30-15:00<br>שבת - סגור</span>
+    <h3 id="FooterSocialMedia" class="TitleFooterSection">בואו להתרשם מהעולם שלנו גם אונליין</h3>
+    <img src="./Images/FacebookLogo.png" alt="פייסבוק" title="פייסבוק" id="Facebook" class="SocialMediaLogos">
+    <img src="./Images/InstagramLogo.png" alt="אינסטגרם" title="אינסטגרם" id="Instagram" class="SocialMediaLogos">
+    <img src="./Images/TiktokLogo.png" alt="טיקטוק" title="טיקטוק" id="Tiktok" class="SocialMediaLogos">
+</footer>
+</body>
+</html>
