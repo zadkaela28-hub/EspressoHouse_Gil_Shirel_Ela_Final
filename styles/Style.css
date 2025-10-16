@@ -1,0 +1,798 @@
+﻿
+/* ===========================================================
+   Espresso House — Home Page
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap');
+*{box-sizing:border-box}
+html,body,header,section,footer,nav,main,
+h1,h2,h3,h4,h5,h6,p,a,li,button,input,textarea,address,small,strong,em{
+    font-family:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;}
+body{
+    font-family:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    direction: rtl;
+    background:#0C0C0D;
+    color:#F5F5F5;
+    line-height:1.85;
+}
+img{
+    max-width:100%;
+}
+a{
+    color:inherit;
+    text-decoration:none
+}
+/* ===========================================================
+   HEADER + NAV + HERO 
+   =========================================================== */
+header{
+    text-align:center;
+    position: relative;
+    height: 600px;
+    z-index:5;
+}
+
+header nav ul{
+    padding:15px;
+    position:relative;
+    z-index:6;
+    text-align:center;            
+}
+header nav li{
+    display:inline-block;            
+    margin:0 7px;                    
+}
+
+header nav a{
+    padding:9px 13px;
+    border-radius:12px;
+    font-weight:700;
+    color:#F5F5F5;
+}
+header nav a:hover{
+    color:#C9A86A;
+    background:rgba(255,255,255,.08);
+}
+
+/* תמונת ההירו – ממלאת את כל ההדר */
+#HeroImage{
+    position:absolute;
+    
+    width:100%;
+    height:110%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+/* שכבת כהות עדינה */
+header::after{
+    content:"";
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+    z-index:1;
+    background:
+            radial-gradient(1100px 380px at 50% -120px, rgba(0,0,0,.45), rgba(0,0,0,.25) 60%, transparent 70%),
+            linear-gradient(180deg, rgba(0,0,0,.40), rgba(0,0,0,.62) 55%, rgba(0,0,0,.72));
+}
+
+/* טקסטים על ההירו + כפתור */
+#HPTitle,
+#HPTitleSubText,
+.Buttons{
+    padding:2px;
+    position:relative;
+    z-index:2;
+    color:#fff;
+}
+
+#HPTitleSubText,
+.Buttons{
+    margin-top:50px;
+}
+#HPTitle{
+    font-weight:800;
+    font-size:56px;
+    margin-top:80px;
+}
+
+header .Buttons{
+    display:inline-block;
+    margin-bottom:150px;
+    background:#C9A86A;
+    color:#1A120A;
+    font-weight:800;
+    padding:14px 22px;
+    border-radius:500px;
+    box-shadow:0 12px 30px rgba(201,168,106,.35);
+}
+header .Buttons:hover{
+    transform:translateY(1px);
+    filter:brightness(1.06);
+}
+/* ===========================================================
+   MENU 
+   =========================================================== */
+#Menu{
+    padding:50px;
+    margin:100px;
+}
+#MenuTitle{
+    text-align:center;
+    font-weight:800;
+    font-size:32px;
+    color:#F5F5F5; 
+}
+#Menu .MenuWrap{
+    display:grid;
+    align-items:center;
+}
+#MenuBake{
+    grid-column:2;
+    grid-row:2;
+}
+/* פריטי התפריט ככרטיסים */
+.CoffeeMenu,
+.BakeMenu{
+    display:block;
+    background:rgba(255,255,255,.06);
+    color:#E6E1DA;
+    padding:10px 12px;
+    border-radius:10px;
+    margin:0 0 10px;
+}
+/* ===========================================================
+   MOOD — 4 תמונות בשורה 
+   =========================================================== */
+#MoodSection{
+    padding:30px 0 46px;
+    border-top:1px solid #1F1F1F;
+    border-bottom:1px solid #1F1F1F;
+}
+#OurMoodTitle{
+    margin:18px;
+    text-align:center;
+    font-weight:800;
+    font-size:32px;
+}
+#MoodSection .MoodItem{
+    display:inline-block;
+    width:24%;            
+    vertical-align:top;     
+    text-align:center;
+    padding:8px 6px;
+}
+
+/* ===========================================================
+   Espresso House — Coffee Beans 
+   =========================================================== */
+#HeroImage,
+.HeroBeans{
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+/* טקסטים מעל ההירו של הפולים */
+#BTitle, #BTitleSubText,
+.buttons{
+    padding-left:24px;
+    padding-right:24px;
+    position:relative;
+    z-index:7;
+    color:#fff;
+}
+#BTitle{
+    margin-top:80px;
+    text-align:center;
+    font-weight:800;
+    font-size:56px;
+}
+#BTitleSubText{
+    color:#E9E5DF;
+    text-align:center;
+    font-size:20px;
+    margin:0 auto;           
+    max-width:800px;
+}
+.buttons{
+    display:inline-block;
+    background:#C9A86A;
+    color:#1A120A;
+    font-weight:800;
+    padding:14px 22px;
+    border-radius:500px;
+    box-shadow:0 12px 30px rgba(201,168,106,.35);
+}
+
+.buttons:hover{
+    transform:translateY(1px);
+    filter:brightness(1.06);
+}
+
+/* ===========================================================
+   BEANS SECTION 
+   =========================================================== */
+#BeansSection{
+    border-bottom:1px solid #1F1F1F;
+    margin-top:60px;
+}
+#BeansSection > div{
+    direction:ltr;
+    max-width:1100px;
+    margin:0 auto;
+    padding:18px 24px 56px;
+    text-align:left;
+}
+
+/* עמודת תמונה */
+.Beans{
+    display:inline-block;
+    width:45%;
+    vertical-align:top;
+    margin-right:10px;
+}
+
+/* עמודת טקסט */
+.BeansContent{
+    display:inline-block;
+    width:50%;
+    vertical-align:top;
+    direction:rtl;
+    text-align:right;
+    margin-top:0;
+    line-height:4;
+}
+
+section h2{
+    margin:0;
+    font-weight:800;
+    font-size:32px;
+    color:#F5F5F5;
+}
+.BeansText{ 
+    margin:2px 0;
+    color:#E6E1DA;
+}
+.Bold{ 
+    font-weight:bold;
+    font-size:16px; 
+}
+.BeansText2{
+    margin:4px 0 0;
+    color:#CFC8BE;
+    padding-bottom:20px;
+    border:none;
+}
+.BeansText2::after{
+    content:"";
+    display:block;
+    height:1px;
+    margin-top:18px;
+    background:linear-gradient(90deg,
+    rgba(201,168,106,0) 0%,
+    rgba(201,168,106,.45) 18%,
+    rgba(201,168,106,.85) 48%,
+    rgba(201,168,106,.45) 82%,
+    rgba(201,168,106,0) 100%);
+    border-radius:999px;
+}
+/* ===========================================================
+      Espresso House — Reservations
+   =========================================================== */
+#HeaderReservations{
+    text-align:center;
+    position: relative;
+    height: 300px;
+    z-index:5;
+}
+:root{
+    --bg:#0C0C0D; --panel:#141416; --line:#1F1F1F; --ink:#F5F5F5; --muted:#C9C9CF;
+    --gold:#C9A86A; --shadow:0 12px 30px rgba(0,0,0,.35); --radius:16px;
+}
+
+/* כותרת  */
+h1{
+    text-align:center;
+    font-weight:800;
+    font-size:56px;
+    margin-top:80px;
+}
+
+/* טופס בסיס */
+form#ReservationCoffee{
+    max-width:800px;
+    margin:18px auto 54px;
+    padding:18px;
+}
+form#ReservationCoffee>div{
+    background:#141416;           
+    border:1px solid #1F1F1F;     
+   
+    padding:18px;
+    margin-bottom:16px;
+}
+/* שדה שם  */
+label[for="customer"] {
+    display:block;
+    font-weight:700;
+    color:#EDEAE4;
+    margin:0 0 8px;
+}
+
+#customer{
+    display:block;
+    width:100%;
+    font-size:17px;
+    background:#0f0f11;
+    color:#F5F5F5;
+    border:1px solid #2a2a2e;
+    border-radius:14px;
+    padding:14px 16px;
+    outline:none;
+}
+
+/* כותרת קטגוריה */
+form#ReservationCoffee>div:not(:first-of-type) > p:first-child{
+    display:block; 
+    margin-bottom:6px;
+}
+
+/*ביטול שברי שורות מיותרים */
+form#ReservationCoffee>div:not(:first-of-type) br{
+    display:none;
+}
+
+/* תוויות האופציות — בשורה (רדיו/צ'קבוקס + טקסט) */
+form#ReservationCoffee>div:not(:first-of-type) label{
+    position:relative;
+     /* RTL: טקסט ואחריו אינפוט */
+    align-items:center;
+    justify-content:center;
+    min-height:56px;               
+    padding:10px 14px;
+    border:1px solid #232327;
+    border-radius:14px;
+    background:#101013;
+    cursor:pointer;
+    color:#EDEAE4;
+}
+form#ReservationCoffee>div:not(:first-of-type) label:hover{
+    background:#131317;
+    border-color:#2b2b31;
+}
+
+/* הדגשת בחירה */
+form#ReservationCoffee input:checked + label {
+    background:linear-gradient(180deg, rgba(201,168,106,.14), rgba(140,100,48,.10));
+    border-color:rgba(201,168,106,.55);
+    box-shadow:0 6px 16px rgba(201,168,106,.18);
+}
+/* טקסט הבחירה שלך: */
+form#ReservationCoffee p.choice{
+    margin-top:4px;
+    font-weight:700;
+    color:#EDEAE4;
+   /* order : 3;*/
+}
+form#ReservationCoffee p.choice ~ img{
+   /* order:4;*/
+    max-width:120px;
+}
+#result{
+    min-height:90px;               
+    margin:18px auto 0;
+    padding:14px 16px;
+    background:#101013;
+    border:1px solid #2a2a2e;
+    color:#F5F5F5;
+}
+
+/* כפתור שליחה  */
+button[type="submit"]{
+    display:block;
+    width:max-content;
+    margin:18px auto 0;
+    background:linear-gradient(180deg,var(--gold),#8C6430);
+    color:#0b0b0c;
+    border:none;
+    padding:12px 18px;
+    font-weight:800;
+    border-radius:16px;
+}
+
+/* ===========================================================
+   Espresso House - About
+   =========================================================== */
+    header{
+        position: relative;
+        z-index: 0;
+    }
+    
+    #AboutHeroImage{
+    position:absolute; 
+    top:0; right:0; bottom:0; left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+    header > * {
+        position: relative;
+        z-index: 2; 
+    }
+/* שכבת כהות עדינה */
+header::after{
+    content:"";
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+    z-index:1;
+    background:
+            radial-gradient(1100px 380px at 50% -120px, rgba(0,0,0,.45), rgba(0,0,0,.25) 60%, transparent 70%),
+            linear-gradient(180deg, rgba(0,0,0,.40), rgba(0,0,0,.62) 55%, rgba(0,0,0,.72));
+}
+#AboutTitle {
+    text-align:center;
+    font-weight:800;
+    font-size:56px;
+    margin-top: 10px;
+}
+#AboutTitle:after{
+    content:"";display:block;height:1px;
+    background:linear-gradient(90deg,
+    rgba(201,168,106,0) 0%,
+    rgba(201,168,106,.45) 18%,
+    rgba(201,168,106,.85) 48%,
+    rgba(201,168,106,.45) 82%,
+    rgba(201,168,106,0) 100%);
+    border-radius:999px;
+    width:400px;
+    margin:18px auto 0;
+}
+#AboutUsTitle{
+    text-align:center;
+    font-weight:800;
+    font-size:32px;
+    color:#F5F5F5;
+    margin-top: 30px;
+}
+#AboutUsIntoText{
+    color:#E9E5DF;
+    font-size: 18px;
+}
+#AboutUsIntoText:after{
+    content:"";display:block;height:1px;
+    background:linear-gradient(90deg,
+    rgba(201,168,106,0) 0%,
+    rgba(201,168,106,.45) 18%,
+    rgba(201,168,106,.85) 48%,
+    rgba(201,168,106,.45) 82%,
+    rgba(201,168,106,0) 100%);
+    border-radius:999px;
+    width:400px;
+    margin:70px auto 0;
+}
+/* ===========================================================
+   ABOUT PROJECT 
+   =========================================================== */
+#AboutProjectTitle,
+#ProjectMeta{
+    color:#E9E5DF;
+    text-align:center;
+}
+
+#AboutProjectTitle{
+    font-size:32px;
+    margin-top:130px;
+}
+
+#ProjectMeta{
+    font-size:18px;
+}
+
+#ProjectMeta::after{ 
+    content:"";
+    display:block;
+    height:1px;
+    background:linear-gradient(90deg,
+    rgba(201,168,106,0) 0%,
+    rgba(201,168,106,.45) 18%,
+    rgba(201,168,106,.85) 48%,
+    rgba(201,168,106,.45) 82%,
+    rgba(201,168,106,0) 100%);
+    border-radius:999px;
+    width:400px;
+    margin:70px auto 0;
+}
+/* ===========================================================
+   PAGES LIST 
+   =========================================================== */
+#PagesTitle{
+    color:#E9E5DF;
+    text-align:center;
+    font-size:32px;
+    margin-top:30px;
+}
+
+#PagesList{
+    padding:0;
+    margin:12px 0 32px;   
+    text-align:center;
+    list-style:none;      
+}
+
+#PagesList li{
+    display:inline-block;
+    margin:0 8px 8px;
+}
+
+#PagesList a{
+    display:inline-block;
+    padding:9px 13px;
+    border-radius:50px;
+    font-weight:700;
+    background:rgba(255,255,255,.05);
+    position:relative; 
+    top:1px;
+}   
+
+#PagesList a:hover{
+    background:#C9A86A;
+    color:#1A120A;
+    top:0;                  
+}
+
+#GoToSiteMap{
+    display:inline-block;
+    font-weight:700;
+    color:#C9A86A;
+}
+
+/* ===========================================================
+   GO TO SITE MAP
+   =========================================================== */
+#GoToSiteMap:hover{
+    color:#FFE09A;
+}
+/* ===========================================================
+   HIT
+   =========================================================== */
+#HITCredit{
+    text-align:center;
+    margin-top: 40px;
+}
+
+#HITLogo {
+    display: block;
+    width: 120px;
+    margin: 0 auto 30px;
+}
+/* ===========================================================
+   Espresso House - ContactUs
+   =========================================================== */
+#HeaderContactUs{
+    text-align:center;
+    position: relative;
+    height:100px;
+  
+}
+.contact{
+    max-width:980px;
+    margin:40px auto 80px;
+    padding:0 20px;
+}
+
+.contact-title{
+    text-align:center;
+    font-weight:800;
+    font-size:40px;
+    margin:18px 0 26px;
+    color:#F5F5F5;
+}
+
+/* ===========================================================
+   CONTACT DETAILS (כרטיס מידע בהיר-כהה)
+   =========================================================== */
+    
+.contact-details{
+    background:rgba(255,255,255,.06);
+    border:1px solid #1F1F1F;
+    border-radius:16px;
+    margin-top:15px;
+    padding:22px;
+}
+.contact-details ul{
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+.contact-details li{
+    padding:10px 6px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+.contact-details li:last-child{
+    border-bottom:0; 
+}
+
+.contact-details strong{ 
+    color:#E9E5DF;
+}
+
+/* ===========================================================
+   FORM
+   =========================================================== */
+.contact-form form{
+    background:rgba(255,255,255,.06);
+    border:1px solid #1F1F1F;
+    border-radius:16px;
+    padding:22px;
+    margin-top: 30px;
+}
+
+.form-row label{
+    display:block;
+    font-weight:700;
+    color:#E9E5DF;
+}
+.form-row input,
+.form-row textarea{
+    width:100%;
+    background:#0F0F10;
+    color:#F5F5F5;
+    border:1px solid #2A2A2B;
+    border-radius:12px;
+    padding:12px 14px;
+    line-height:1.5;
+    margin-bottom:16px;
+}
+
+/* ===========================================================
+   BUTTON 
+   =========================================================== */
+.contact-form .Buttons{
+    display:inline-block;
+    background:#C9A86A;
+    color:#1A120A;
+    font-weight:800;
+    padding:14px 22px;
+    border-radius:500px;
+    box-shadow:0 12px 30px rgba(201,168,106,.35);
+    cursor:pointer;
+    border:0;
+}
+/* ===========================================================
+   Espresso House – Site Map 
+   =========================================================== */
+#HeaderSiteMap{
+    text-align:center;
+    position:relative;
+    height:100px;
+}
+#HTitle{ 
+    
+    display:none; 
+}
+
+.sitemap h2{
+    margin:40px auto 20px;
+    text-align:right;
+    font-weight:800;
+    font-size:42px;
+    color:#C9A86A;
+    max-width:1100px;
+    padding:0 16px;
+}
+
+.sitemap .root{
+    list-style:none;
+    margin:0 auto 60px;
+    padding:0 16px;
+    max-width:1100px;
+    text-align:right;
+}
+
+.sitemap .root > li{
+    display:inline-block;   
+    width:19%;
+    min-width:180px;
+    vertical-align:top;
+    margin:0 0 28px;
+    border-top:1px solid #1F1F1F;
+    padding-top:14px;
+}
+
+.sitemap .root > li > a{       
+    display:block;
+    font-weight:800;
+    font-size:20px;
+    color:#E9E5DF;
+    margin-bottom:8px;
+}
+
+.sitemap .root > li > ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.sitemap .root > li > ul > li > a:hover{
+    color:#FFFFFF;
+    text-decoration:underline;
+}
+/* ===========================================================
+   FOOTER 
+   =========================================================== */
+footer{
+    padding:30px 24px 50px;
+    text-align:center;
+}
+
+footer nav ul{
+    padding:0;
+    margin:10px 0 14px;
+    list-style:none;         
+}
+
+footer nav li{
+    display:inline-block;
+    margin:0 8px;            
+}
+
+.SocialMediaLogos{
+    width:28px;
+    height:auto;            
+    display:inline-block;
+    margin:6px;               
+}
+
+/* ===========================================================
+   Breadcrumbs — פירורי לחם (מתחת להדר)
+   =========================================================== */
+.breadcrumbs{
+    position:absolute;
+    top:50px;
+    right:0;
+    z-index:2;               
+    direction:rtl;
+    background-color:rgba(25,25,25,.7);
+    border-bottom:1px solid #1F1F1F;
+    padding:10px 16px;
+    margin:0;
+}
+
+.breadcrumbs ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:right;
+}
+
+.breadcrumbs li{
+    display:inline;
+    margin:0 6px;
+}
+
+.breadcrumbs li + li::before{
+    content:"›";
+    color:#A78B68;
+    margin:0 6px;
+}
+
+.breadcrumbs a{
+    color:#E6E1DA;
+    text-decoration:none;
+    font-weight:400;
+}
+
+.breadcrumbs a:hover{
+    color:#C9A86A;
+}
+
+.breadcrumbs [aria-current="page"]{
+    color:#C9A86A;
+    font-weight:700;
+}
